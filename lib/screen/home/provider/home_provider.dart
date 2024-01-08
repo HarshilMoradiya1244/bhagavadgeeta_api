@@ -5,7 +5,7 @@ import '../../../utils/api_helper.dart';
 
 class Chapterprovider with ChangeNotifier{
 
-  List<ChapterModel?> chapterList = [];
+  List<ChapterModel> chapterList = [];
   Future<void> getData() async {
     ApiHelper apiHelper = ApiHelper();
     List<ChapterModel>? home = await apiHelper.geetaApi();

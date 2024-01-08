@@ -1,4 +1,5 @@
 import 'package:bhagavadgeeta_api/screen/home/provider/home_provider.dart';
+import 'package:bhagavadgeeta_api/screen/verse/provider/verse_provider.dart';
 import 'package:bhagavadgeeta_api/utils/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,9 @@ void main() {
       providers: [
         ChangeNotifierProvider(
           create: (context) => Chapterprovider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => VerseProvider(),
         ),
       ],
       child: MaterialApp(
