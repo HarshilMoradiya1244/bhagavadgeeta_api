@@ -1,15 +1,9 @@
 class ChapterModel {
-  final String name,
-      slug,
-      name_transliterated,
-      name_translated,
-      verses_count,
-      chapter_number,
-      name_meaning,
-      chapter_summary,
-      chapter_summary_hindi;
+  final int id,verses_count, chapter_number;
+  final String name, slug, name_transliterated, name_translated,  name_meaning, chapter_summary, chapter_summary_hindi;
 
-  ChapterModel({
+  ChapterModel( {
+    required this.id,
     required this.name,
     required this.slug,
     required this.name_transliterated,
@@ -23,6 +17,7 @@ class ChapterModel {
 
   factory ChapterModel.mapToModel(Map m1) {
     return ChapterModel(
+         id: m1['id'],
         name: m1['name'],
         slug: m1['slug'],
         name_transliterated: m1['name_transliterated'],
